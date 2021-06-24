@@ -13,7 +13,7 @@ table.table.table-hover
       th= User.human_attribute_name(:updated_at)
       th
   tbody
-    - @user.each do |user|
+    - @user&.each do |user|
       tr
         td= link_to user.name, [:admin, user]
         td= user.email
